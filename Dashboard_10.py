@@ -51,7 +51,7 @@ def load_data(file_path):
 
 # Initialize session state
 if "filtered" not in st.session_state:
-    file_path = r"D:\Epsilon AI\Case Study - Algolia\Case Study\sampled_search_data.csv"
+    file_path = "sampled_search_data.csv"
     df = load_data(file_path)
     if df is None:
         st.stop()

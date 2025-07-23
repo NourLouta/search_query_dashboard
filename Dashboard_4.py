@@ -39,7 +39,9 @@ st.markdown("""
 
 # Cache data loading
 @st.cache_data(show_spinner=True)
-def load_data(file_path):
+def load_data(file_path=None):
+    if file_path is None:
+        file_path = "https://drive.google.com/uc?export=download&id=1DO7iRlE5niKiHEo4PIcCNYpAvwyekNxc"
     try:
         df = pd.read_csv(file_path, parse_dates=['Date'])
         logger.info("Dataset loaded successfully")
@@ -48,7 +50,7 @@ def load_data(file_path):
         logger.error(f"Error loading dataset: {str(e)}")
         st.error(f"Error loading dataset: {str(e)}")
         return None
-
+        
 # Initialize session state
 if "filtered" not in st.session_state:
     file_path = r"D:\Epsilon AI\Case Study - Algolia\Case Study\preprocessed_search_data.csv"

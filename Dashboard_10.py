@@ -402,7 +402,7 @@ with tab5:
 
 # Instructions
 st.markdown("""
-### Instructionsb
+### Instructions
 1. Use the sidebar to select multiple languages, sub categories, and months.
 2. Adjust the sample size for faster visualization rendering (default: 50,000).
 3. Click **Apply Filters** to update or **Reset Filters** to revert to the full dataset.
